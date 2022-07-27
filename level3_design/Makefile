@@ -6,8 +6,8 @@ PWD=$(shell pwd)
 
 VERILOG_SOURCES = $(PWD)/               # provide your design path
 
-TOPLEVEL :=           # design file
-MODULE   :=     # test file
+TOPLEVEL :=      versatile_counter     # design file
+MODULE   :=     test_vc				   # test file
 
 include $(shell cocotb-config --makefiles)/Makefile.sim
 
