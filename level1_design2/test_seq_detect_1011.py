@@ -33,16 +33,18 @@ async def test_seq_bug1(dut):
 
     seq_reg = "0000"
     
-    data=[0,1,0,1,1,0,1,1]
-    for i in range(7):
+    data=[1,0,1,1,0,1,1,0,1,0,1,1]
+    for i in range(11):
         p=0
         await FallingEdge(dut.clk)
         inp_bit = data[i]
         seq_reg=seq_reg[1:]
         seq_reg=seq_reg+str(inp_bit)
         print(seq_reg)
-        if seq_reg=="1011":
-            assert dut.seq_seen.value == 1, f"test failed with seq_seen = {dut.seq_seen.value} "
+        if seq_reg == "1011":
+            assert dut.seq_seen.value == 1, f"test failed with seq_seen = {dut.seq_seen.value} at seq_reg= {seq_reg}"
+        else:
+            assert dut.seq_seen.value == 0, f"test failed with seq_seen = {dut.seq_seen.value} at seq_reg= {seq_reg} "
          
 
 
