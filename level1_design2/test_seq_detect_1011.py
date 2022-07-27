@@ -1,14 +1,13 @@
 # See LICENSE.vyoma for details
 
 # SPDX-License-Identifier: CC0-1.0
-
-import os
-import random
-from pathlib import Path
-
 import cocotb
 from cocotb.clock import Clock
+from cocotb.triggers import Timer
 from cocotb.triggers import RisingEdge, FallingEdge
+
+import random
+import numpy
 
 def rand(bits):
     return random.randint(0, 2**bits - 1)
@@ -28,3 +27,12 @@ async def test_seq_bug1(dut):
 
     cocotb.log.info('#### CTB: Develop your test here! ######')
     
+    inp_bit= dut.inp_bit.value
+    reset=dut.reset.value
+    clk=dut.clk.value
+
+    for i in range(1000):
+        p=1/100
+        data = int(numpy.random.choice(numpy.arange(0, 2), p=[p, 1-p]))
+
+        assert dut.data.value == 1, f"test failed with p={p}"
