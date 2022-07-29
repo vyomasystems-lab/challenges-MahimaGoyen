@@ -1,4 +1,4 @@
-`switch (LFSR_LENGTH)
+`  switch (LFSR_LENGTH)
 `case 2
  `let LFSR_FB="qi[`LFSR_LENGTH]^qi[1]"
  `let LFSR_FB_REW="qi[1]^qi[2]"

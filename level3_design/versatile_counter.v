@@ -1,6 +1,6 @@
-`include "versatile_counter_defines.v"
+`include "/workspace/challenges-MahimaGoyen/level3_design/versatile_counter_defines.v"
 `define LFSR_LENGTH cnt_length
-`include "lfsr_polynom.v"
+`include "/workspace/challenges-MahimaGoyen/level3_design/lfsr_polynom.v"
 `let CNT_INDEX=CNT_LENGTH-1
 `ifndef CNT_MODULE_NAME
 `define CNT_MODULE_NAME vcnt
