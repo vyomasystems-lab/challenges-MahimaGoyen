@@ -18,8 +18,8 @@
 ![image](https://github.com/vyomasystems-lab/challenges-MahimaGoyen/blob/master/level2_design/l2dr.PNG)<br/>
 *Figure 2 - Result*<br/>
 
-# Points to be fixed in Verilog Code <br/>
-A conventional VCO has diff
+# Input used <br/>
+
 
 # Author<br/>
 Mahima Goyen<br/>
