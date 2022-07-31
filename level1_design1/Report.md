@@ -2,9 +2,9 @@
 
 
 # Table Of Content <br/>
-* [Test Bench](https://github.com/vyomasystems-lab/challenges-MahimaGoyen/edit/master/level1_design1#Test-Bench)<br/>
-* [Result](https://github.com/vyomasystems-lab/challenges-MahimaGoyen/edit/master/level1_design1#Result)<br/>
-* [Points to be fixed in Verilog Code](https://github.com/vyomasystems-lab/challenges-MahimaGoyen/edit/master/level1_design1#Points-to-be-fixed-in-Verilog-Code)<br/>
+* [Test Bench](https://github.com/vyomasystems-lab/challenges-MahimaGoyen/tree/master/level1_design1#Test-Bench)<br/>
+* [Result](https://github.com/vyomasystems-lab/challenges-MahimaGoyen/tree/master/level1_design1#Result)<br/>
+* [Points to be fixed in Verilog Code](https://github.com/vyomasystems-lab/challenges-MahimaGoyen/tree/master/level1_design1#Points-to-be-fixed-in-Verilog-Code)<br/>
 
 # Test Bench <br/>
 
