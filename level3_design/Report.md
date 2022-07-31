@@ -4,7 +4,6 @@
 # Table Of Content <br/>
 * [Test Bench](https://github.com/vyomasystems-lab/challenges-MahimaGoyen/tree/master/level1_design1#Test-Bench)<br/>
 * [Result](https://github.com/vyomasystems-lab/challenges-MahimaGoyen/tree/master/level1_design1#Result)<br/>
-* [Points to be fixed in Verilog Code](https://github.com/vyomasystems-lab/challenges-MahimaGoyen/tree/master/level1_design1#Points-to-be-fixed-in-Verilog-Code)<br/>
 * [Author](https://github.com/vyomasystems-lab/challenges-MahimaGoyen/tree/master/level1_design2#author)<br/>
 * [Acknowledgements](https://github.com/vyomasystems-lab/challenges-MahimaGoyen/tree/master/level1_design2#acknowledgements-)<br/>
 * [Reference](https://github.com/vyomasystems-lab/challenges-MahimaGoyen/tree/master/level1_design2#reference-)<br/>
@@ -18,9 +17,6 @@
 
 ![image](https://github.com/vyomasystems-lab/challenges-MahimaGoyen/blob/master/level1_design1/l1d1r1.PNG)<br/>
 *Figure 2 - Result*<br/>
-
-# Points to be fixed in Verilog Code <br/>
-A conventional VCO has diff
 
 # Author<br/>
 Mahima Goyen<br/>
