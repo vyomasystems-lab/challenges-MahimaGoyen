@@ -10,12 +10,12 @@
 
 # Test Bench <br/>
 
-![image](https://github.com/vyomasystems-lab/challenges-MahimaGoyen/blob/master/level1_design1/l1d1t.PNG)<br/>
+![image](https://github.com/vyomasystems-lab/challenges-MahimaGoyen/blob/master/level2_design/l2dt.PNG)<br/>
 *Figure 1 - Test Bench Code*<br/>
 
 # Result <br/>
 
-![image](https://github.com/vyomasystems-lab/challenges-MahimaGoyen/blob/master/level1_design1/l1d1r1.PNG)<br/>
+![image](https://github.com/vyomasystems-lab/challenges-MahimaGoyen/blob/master/level2_design/l2dr.PNG)<br/>
 *Figure 2 - Result*<br/>
 
 # Points to be fixed in Verilog Code <br/>
