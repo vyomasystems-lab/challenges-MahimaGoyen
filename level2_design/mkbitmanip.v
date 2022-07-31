@@ -19,7 +19,7 @@
 // mav_putvalue_src3              I    32
 // EN_mav_putvalue                I     1 unused
 //
-// Combinational paths from inputs to outputs:
+// Combinational paths from inputs to outputs:mav_putvalue_instr
 //   (mav_putvalue_instr,
 //    mav_putvalue_src1,
 //    mav_putvalue_src2,
