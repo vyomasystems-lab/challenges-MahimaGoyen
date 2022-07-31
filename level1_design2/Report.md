@@ -1,4 +1,4 @@
-# Report <br/>
+# Report - Sequence Detector<br/>
 
 
 # Table Of Content <br/>
