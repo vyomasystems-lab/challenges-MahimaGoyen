@@ -1,4 +1,4 @@
-# challenges-MahimaGoyen
-challenges-MahimaGoyen created by GitHub Classroom
-#Hello!
+# Bug Hackathon
+
+
 Find report of each code seperately
