@@ -19,7 +19,30 @@
 *Figure 2 - Result*<br/>
 
 # Points to be fixed in Verilog Code <br/>
-A conventional VCO has diff
+1. SEQ_1:
+      begin
+        if(inp_bit == 1)
+          next_state = SEQ_1;
+        else
+          next_state = SEQ_10;
+      end
+
+2. SEQ_101:
+      begin
+        if(inp_bit == 1)
+          next_state = SEQ_1011;
+        else
+          next_state = SEQ_10;
+      end
+
+3. SEQ_1011:
+      begin
+        if(inp_bit == 1)
+          next_state = SEQ_1;
+        else
+          next_state = SEQ_10;
+      end
+
 
 # Author<br/>
 Mahima Goyen<br/>
