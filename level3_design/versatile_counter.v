@@ -1,20 +1,17 @@
-`include "/workspace/challenges-MahimaGoyen/level3_design/versatile_counter_defines.v"
-`define LFSR_LENGTH cnt_length
-`include "/workspace/challenges-MahimaGoyen/level3_design/lfsr_polynom.v"
+`include "versatile_counter_defines.v"
+`define LFSR_LENGTH `CNT_LENGTH
+`include "lfsr_polynom.v"
 `let CNT_INDEX=CNT_LENGTH-1
-`ifndef CNT_MODULE_NAME
-`define CNT_MODULE_NAME vcnt
-`endif
 module `CNT_MODULE_NAME
   (
 `ifdef CNT_TYPE_GRAY
-    output reg [cnt_length:1] q,
+    output reg [`CNT_LENGTH:1] q,
  `ifdef CNT_Q_BIN
-    output [cnt_length:1]    q_bin,
+    output [`CNT_LENGTH:1]    q_bin,
  `endif
 `else   
  `ifdef CNT_Q
-    output [cnt_length:1]    q,
+    output [`CNT_LENGTH:1]    q,
  `endif
 `endif
 `ifdef CNT_CLEAR
@@ -30,7 +27,7 @@ module `CNT_MODULE_NAME
     input cke,
 `endif
 `ifdef CNT_QNEXT
-    output [cnt_length:1] q_next,
+    output [`CNT_LENGTH:1] q_next,
 `endif
 `ifdef CNT_Z
     output z,
@@ -38,40 +35,26 @@ module `CNT_MODULE_NAME
 `ifdef CNT_ZQ
     output reg zq,
 `endif
-`ifdef CNT_LEVEL1
-    output reg level1,
-`endif
-`ifdef CNT_LEVEL2
-    output reg level2,
-`endif
     input clk,
     input rst
    );
    
-   parameter cnt_length = `CNT_LENGTH;
-   parameter cnt_reset_value = `CNT_RESET_VALUE;
 `ifdef CNT_SET
-   parameter set_value = cnt_length'd`CNT_SET_VALUE;
+   parameter set_value = `CNT_SET_VALUE;
 `endif
 `ifdef CNT_WRAP
-   parameter wrap_value = cnt_length'd`CNT_WRAP_VALUE;
-`endif
-`ifdef CNT_LEVEL1
-    parameter level1_value = cnt_length'd`CNT_LEVEL1_VALUE;
-`endif
-`ifdef CNT_LEVEL2
-    parameter level2_value = cnt_length'd`CNT_LEVEL2_VALUE;
-`endif
+   parameter wrap_value = `CNT_WRAP_VALUE;
+`endif   
 
    // internal q reg
-   reg [cnt_length:1] qi;
+   reg [`CNT_LENGTH:1] qi;
    
 `ifndef CNT_QNEXT
-   wire [cnt_length:1] q_next;   
+   wire [`CNT_LENGTH:1] q_next;   
 `endif
 `ifdef CNT_REW
-   wire [cnt_length:1] q_next_fw;   
-   wire [cnt_length:1] q_next_rew;   
+   wire [`CNT_LENGTH:1] q_next_fw;   
+   wire [`CNT_LENGTH:1] q_next_rew;   
 `endif
 
 `ifndef CNT_REW   
@@ -80,35 +63,35 @@ module `CNT_MODULE_NAME
      assign q_next_fw =
 `endif	       
 `ifdef CNT_CLEAR
-       clear ? cnt_length'd0 :
+       clear ? `CNT_LENGTH'd0 :
 `endif
 `ifdef CNT_SET		  
 	 set ? set_value :
 `endif
 `ifdef CNT_WRAP
-	   (qi == wrap_value) ? cnt_length'd0 :
+	   (qi == wrap_value) ? `CNT_LENGTH'd0 :
 `endif
 `ifdef CNT_TYPE_LFSR
 	     {qi[`CNT_INDEX:1],~(`LFSR_FB)};
 `else
-   qi + cnt_length'd1;
+   qi + `CNT_LENGTH'd1;
 `endif
    
 `ifdef CNT_REW
    assign q_next_rew =
  `ifdef CNT_CLEAR
-     clear ? cnt_length'd0 :
+     clear ? `CNT_LENGTH'd0 :
  `endif
  `ifdef CNT_SET		  
        set ? set_value :
  `endif
  `ifdef CNT_WRAP
-	 (qi == cnt_length'd0) ? wrap_value :
+	 (qi == `CNT_LENGTH'd0) ? wrap_value :
  `endif
  `ifdef CNT_TYPE_LFSR
-	   {~(`LFSR_FB_REW),qi[cnt_length:2]};
+	   {~(`LFSR_FB_REW),qi[`CNT_LENGTH:2]};
  `else
-   qi - cnt_length'd1;
+   qi - `CNT_LENGTH'd1;
  `endif
 `endif   
    
@@ -118,7 +101,7 @@ module `CNT_MODULE_NAME
    
    always @ (posedge clk or posedge rst)
      if (rst)
-       qi <= cnt_length'd0;
+       qi <= `CNT_LENGTH'd0;
      else
 `ifdef CNT_CE
    if (cke)
@@ -144,7 +127,7 @@ module `CNT_MODULE_NAME
 `endif
    
 `ifdef CNT_Z
-   assign z = (q == cnt_length'd0);
+   assign z = (q == `CNT_LENGTH'd0);
 `endif
 
 `ifdef CNT_ZQ
@@ -155,35 +138,6 @@ module `CNT_MODULE_NAME
  `ifdef CNT_CE
        if (cke)
  `endif
-	 zq <= q_next == cnt_length'd0;
+	 zq <= q_next == `CNT_LENGTH'd0;
 `endif
-
-`ifdef CNT_LEVEL1
-    always @ (posedge clk or posedge rst)
-        if (rst)
-            level1 <= 1'b0;
-        else
- `ifdef CNT_CE
-        if (cke)
- `endif
-            if (q_next == level1_value)
-                level1 <= 1'b1;
-            else if (q == level1_value & rew)
-                level1 <= 1'b0;
-`endif
-
-`ifdef CNT_LEVEL2
-    always @ (posedge clk or posedge rst)
-        if (rst)
-            level2 <= 1'b0;
-        else
- `ifdef CNT_CE
-        if (cke)
- `endif
-            if (q_next == level2_value)
-                level2 <= 1'b1;
-            else if (q == level2_value & rew)
-                level2 <= 1'b0;
-`endif
-
 endmodule
