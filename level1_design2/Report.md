@@ -5,6 +5,8 @@
 * [Test Bench](https://github.com/vyomasystems-lab/challenges-MahimaGoyen/tree/master/level1_design2#Test-Bench)<br/>
 * [Result](https://github.com/vyomasystems-lab/challenges-MahimaGoyen/tree/master/level1_design2#Result)<br/>
 * [Points to be fixed in Verilog Code](https://github.com/vyomasystems-lab/challenges-MahimaGoyen/tree/master/level1_design2#Points-to-be-fixed-in-Verilog-Code)<br/>
+* [Author](https://github.com/vyomasystems-lab/challenges-MahimaGoyen/tree/master/level1_design2#author)<br/>
+* [Acknowledgements](https://github.com/vyomasystems-lab/challenges-MahimaGoyen/tree/master/level1_design2#acknowledgements-)<br/>
 
 # Test Bench <br/>
 
@@ -18,3 +20,10 @@
 
 # Points to be fixed in Verilog Code <br/>
 A conventional VCO has diff
+
+# Author<br/>
+Mahima Goyen<br/>
+
+# Acknowledgements <br/>
+[Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd.](https://www.linkedin.com/in/kunal-ghosh-vlsisystemdesign-com-28084836/)<br/>
+[Vyoma Systems]<br/>
