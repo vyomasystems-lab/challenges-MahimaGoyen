@@ -18,8 +18,10 @@
 ![image](https://github.com/vyomasystems-lab/challenges-MahimaGoyen/blob/master/level2_design/l2dr.PNG)<br/>
 *Figure 2 - Result*<br/>
 
-# Input used <br/>
-
+# Inputs <br/>
+ mav_putvalue_src1 = 0x5
+ mav_putvalue_src2 = 0x2
+ mav_putvalue_src3 = 0x2
 
 # Author<br/>
 Mahima Goyen<br/>
