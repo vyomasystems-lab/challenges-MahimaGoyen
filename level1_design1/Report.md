@@ -19,7 +19,8 @@
 *Figure 2 - Result*<br/>
 
 # Points to be fixed in Verilog Code <br/>
-A conventional VCO has diff
+1.  5'b01101: out = inp12; should be  5'b01100: out = inp12;
+2.   5'b11110: out = inp30; should be present
 
 # Author<br/>
 Mahima Goyen<br/>
