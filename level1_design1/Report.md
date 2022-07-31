@@ -5,6 +5,8 @@
 * [Test Bench](https://github.com/vyomasystems-lab/challenges-MahimaGoyen/tree/master/level1_design1#Test-Bench)<br/>
 * [Result](https://github.com/vyomasystems-lab/challenges-MahimaGoyen/tree/master/level1_design1#Result)<br/>
 * [Points to be fixed in Verilog Code](https://github.com/vyomasystems-lab/challenges-MahimaGoyen/tree/master/level1_design1#Points-to-be-fixed-in-Verilog-Code)<br/>
+* [Author](https://github.com/vyomasystems-lab/challenges-MahimaGoyen/tree/master/level1_design2#author)<br/>
+* [Acknowledgements](https://github.com/vyomasystems-lab/challenges-MahimaGoyen/tree/master/level1_design2#acknowledgements-)<br/>
 
 # Test Bench <br/>
 
