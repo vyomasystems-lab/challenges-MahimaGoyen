@@ -9,7 +9,7 @@
 
 # Test Bench <br/>
 
-![image](https://github.com/vyomasystems-lab/challenges-MahimaGoyen/blob/master/level1_design1/l1d1t.PNG)<br/>
+![image](https://github.com/vyomasystems-lab/challenges-MahimaGoyen/blob/master/level3_design/l3.PNG)<br/>
 *Figure 1 - Test Bench Code*<br/>
 
 # Author<br/>
